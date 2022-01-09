@@ -8,7 +8,7 @@ option(toml11_TEST_WITH_ASAN  "use LLVM address sanitizer" OFF)
 option(toml11_TEST_WITH_UBSAN "use LLVM undefined behavior sanitizer" OFF)
 
 if(MSVC)
-    add_definitions("/Zc:__cplusplus")  # define __cplusplus value correctly
+#     add_definitions("/Zc:__cplusplus")  # define __cplusplus value correctly
     add_definitions("/utf-8")           # enable to use u8"" literal
     if(MSVC_VERSION LESS 1910)
         message(STATUS "MSVC < 1910. DEFINE_CONVERSION_NON_INTRUSIVE is disabled")
